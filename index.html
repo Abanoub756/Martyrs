@@ -21,6 +21,7 @@
             --gold: #d4af37;
             --gold-light: #f4d03f;
             --gold-dark: #b8941e;
+            --blood-red: #8b0000;
             --text-light: #e8e8e8;
             --text-dim: #a0a0a0;
         }
@@ -46,7 +47,7 @@
         }
 
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -54,18 +55,18 @@
             text-align: center;
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://via.placeholder.com/1920x1080/0a0a0a/d4af37?text=عصر+الاستشهاد') center/cover;
             position: relative;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.85) 100%);
-        }
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.85) 100%);
+            }
 
         .hero-content {
             position: relative;
@@ -79,6 +80,7 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
             from {
                 opacity: 0;
                 transform: translateY(40px);
@@ -87,33 +89,34 @@
 
         .hero h1 {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-size: clamp(2.2rem, 8vw, 6rem);
             font-weight: 900;
             color: var(--gold);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .hero h2 {
-            font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+            font-size: clamp(1.1rem, 3vw, 2.2rem);
             font-weight: 300;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             color: var(--gold-light);
             letter-spacing: 1px;
         }
 
         .hero p {
             max-width: 800px;
-            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-            margin-bottom: 45px;
+            font-size: clamp(0.95rem, 2vw, 1.3rem);
+            margin-bottom: 35px;
             color: var(--text-dim);
-            line-height: 2.2;
+            line-height: 2;
+            padding: 0 10px;
         }
 
         .cta-button {
-            padding: 20px 55px;
-            font-size: 1.25rem;
+            padding: 16px 45px;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
             font-weight: 700;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--bg-dark);
@@ -127,38 +130,38 @@
             font-family: 'El Messiri', sans-serif;
         }
 
-        .cta-button:hover {
-            transform: scale(1.08);
-            box-shadow: 0 0 60px rgba(212, 175, 55, 0.9);
-        }
+            .cta-button:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 60px rgba(212, 175, 55, 0.9);
+            }
 
         section {
-            padding: 120px 25px;
+            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(2.2rem, 5.5vw, 4rem);
+            font-size: clamp(1.8rem, 5vw, 4rem);
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: clamp(40px, 7vw, 70px);
             color: var(--gold);
             position: relative;
-            padding-bottom: 25px;
+            padding-bottom: 20px;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            box-shadow: 0 0 10px var(--gold);
-        }
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: clamp(80px, 15vw, 120px);
+                height: 3px;
+                background: linear-gradient(90deg, transparent, var(--gold), transparent);
+                box-shadow: 0 0 10px var(--gold);
+            }
 
         .love-pain-section {
             background: var(--bg-secondary);
@@ -167,31 +170,32 @@
         .intro-text {
             text-align: center;
             max-width: 900px;
-            margin: 0 auto 60px;
-            font-size: 1.2rem;
-            line-height: 2.2;
+            margin: 0 auto 50px;
+            font-size: clamp(1rem, 2.2vw, 1.2rem);
+            line-height: 2;
             color: var(--text-dim);
+            padding: 0 15px;
         }
 
         .quote-highlight {
             display: block;
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.4rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             color: var(--gold-light);
-            margin: 30px 0;
+            margin: 25px 0;
             font-style: italic;
         }
 
         .love-pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(25px, 4vw, 40px);
+            margin-top: 40px;
         }
 
         .love-pain-card {
             background: var(--bg-dark);
-            padding: 40px;
+            padding: clamp(25px, 5vw, 40px);
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.2);
             text-align: center;
@@ -200,84 +204,85 @@
             transform: translateY(30px);
         }
 
-        .love-pain-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .love-pain-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-        .love-pain-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--gold);
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
-        }
+            .love-pain-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--gold);
+                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+            }
 
         .love-pain-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 15px;
         }
 
         .love-pain-card h3 {
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
             color: var(--gold);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .love-pain-card p {
             color: var(--text-dim);
-            font-size: 1.1rem;
-            line-height: 1.9;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.8;
         }
 
         .martyr-definition {
             background: var(--bg-dark);
-            padding: 50px;
+            padding: clamp(30px, 5vw, 50px);
             border-radius: 20px;
             border-right: 5px solid var(--gold);
-            margin-top: 60px;
+            margin-top: 50px;
             opacity: 0;
             transform: translateX(-30px);
             transition: all 0.6s ease;
         }
 
-        .martyr-definition.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+            .martyr-definition.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
 
-        .martyr-definition h3 {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 25px;
-        }
+            .martyr-definition h3 {
+                font-family: 'El Messiri', sans-serif;
+                font-size: clamp(1.5rem, 3.5vw, 2rem);
+                color: var(--gold);
+                margin-bottom: 20px;
+            }
 
-        .martyr-definition ul {
-            list-style: none;
-            padding: 0;
-        }
+            .martyr-definition ul {
+                list-style: none;
+                padding: 0;
+            }
 
-        .martyr-definition li {
-            padding: 15px 0;
-            font-size: 1.15rem;
-            color: var(--text-dim);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-        }
+            .martyr-definition li {
+                padding: 12px 0;
+                font-size: clamp(0.95rem, 2vw, 1.15rem);
+                color: var(--text-dim);
+                border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+                line-height: 1.7;
+            }
 
-        .martyr-definition li:last-child {
-            border-bottom: none;
-        }
+                .martyr-definition li:last-child {
+                    border-bottom: none;
+                }
 
         .reasons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            gap: clamp(20px, 3vw, 35px);
+            margin-top: 40px;
         }
 
         .reason-card {
             background: var(--bg-secondary);
-            padding: 35px;
+            padding: clamp(25px, 4vw, 35px);
             border-radius: 18px;
             border: 1px solid rgba(212, 175, 55, 0.25);
             transition: all 0.5s ease;
@@ -285,69 +290,70 @@
             transform: translateY(30px);
         }
 
-        .reason-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .reason-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-        .reason-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--gold);
-            box-shadow: 0 12px 45px rgba(212, 175, 55, 0.35);
-        }
+            .reason-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--gold);
+                box-shadow: 0 10px 35px rgba(212, 175, 55, 0.35);
+            }
 
         .reason-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             color: var(--gold);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .reason-text {
-            font-size: 1.1rem;
-            line-height: 1.9;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            line-height: 1.8;
             color: var(--text-light);
         }
 
         .christian-life {
             background: var(--bg-dark);
-            padding: 50px;
+            padding: clamp(30px, 5vw, 50px);
             border-radius: 20px;
-            margin-top: 70px;
+            margin-top: 60px;
             border: 2px solid rgba(212, 175, 55, 0.3);
         }
 
-        .christian-life h3 {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 2.2rem;
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 40px;
-        }
+            .christian-life h3 {
+                font-family: 'El Messiri', sans-serif;
+                font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+                color: var(--gold);
+                text-align: center;
+                margin-bottom: 30px;
+            }
 
         .life-points {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+            gap: clamp(15px, 3vw, 25px);
         }
 
         .life-point {
             background: var(--bg-secondary);
-            padding: 25px;
+            padding: clamp(18px, 3vw, 25px);
             border-radius: 12px;
             border-right: 3px solid var(--gold);
         }
 
-        .life-point h4 {
-            color: var(--gold-light);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
+            .life-point h4 {
+                color: var(--gold-light);
+                font-size: clamp(1rem, 2.2vw, 1.2rem);
+                margin-bottom: 8px;
+            }
 
-        .life-point p {
-            color: var(--text-dim);
-            font-size: 1.05rem;
-        }
+            .life-point p {
+                color: var(--text-dim);
+                font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+                line-height: 1.6;
+            }
 
         .timeline-section {
             background: var(--bg-secondary);
@@ -356,18 +362,18 @@
 
         .saints-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
+            gap: clamp(15px, 3vw, 30px);
+            margin-bottom: 60px;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
 
-        .saints-gallery.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .saints-gallery.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
         .saint-image-card {
             position: relative;
@@ -376,19 +382,21 @@
             border: 3px solid var(--gold);
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
             transition: all 0.4s ease;
+            height: fit-content;
+            display: flex;
         }
 
-        .saint-image-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
-        }
+            .saint-image-card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+            }
 
-        .saint-image-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-        }
+            .saint-image-card img {
+                width: 100%;
+                height: clamp(220px, 30vw, 300px);
+                object-fit: cover;
+                display: block;
+            }
 
         .saint-caption {
             position: absolute;
@@ -396,10 +404,10 @@
             left: 0;
             right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.95));
-            padding: 30px 15px 15px;
+            padding: 25px 10px 12px;
             color: var(--gold-light);
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             text-align: center;
         }
 
@@ -409,101 +417,102 @@
         }
 
         .timeline-phase {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .phase-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
             color: var(--gold-light);
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .timeline {
             position: relative;
-            padding: 30px 0;
+            padding: 20px 0;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 50%;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, 0.2));
-        }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: clamp(15px, 5vw, 50%);
+                width: 3px;
+                height: 100%;
+                background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, 0.2));
+            }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             opacity: 0;
             transform: translateX(-40px);
             transition: all 0.7s ease;
         }
 
-        .timeline-item.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
+            .timeline-item.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
 
         .timeline-content {
             background: var(--bg-dark);
-            padding: 35px;
+            padding: clamp(20px, 4vw, 35px);
             border-radius: 18px;
             border-right: 4px solid var(--gold);
-            margin-left: 70px;
+            margin-left: clamp(40px, 8vw, 70px);
             position: relative;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
         }
 
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 25px;
-            right: -38px;
-            width: 24px;
-            height: 24px;
-            background: var(--gold);
-            border-radius: 50%;
-            box-shadow: 0 0 25px var(--gold);
-            border: 4px solid var(--bg-dark);
-        }
+            .timeline-content::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                right: clamp(-28px, -5vw, -38px);
+                width: clamp(18px, 4vw, 24px);
+                height: clamp(18px, 4vw, 24px);
+                background: var(--gold);
+                border-radius: 50%;
+                box-shadow: 0 0 25px var(--gold);
+                border: 3px solid var(--bg-dark);
+            }
 
         .timeline-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 3vw, 2rem);
             color: var(--gold);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
 
         .timeline-text {
             color: var(--text-dim);
-            font-size: 1.15rem;
-            line-height: 2;
+            font-size: clamp(0.95rem, 2vw, 1.15rem);
+            line-height: 1.9;
         }
 
         .diocletian-section {
             background: linear-gradient(180deg, var(--bg-darker), #000);
-            padding: 100px 25px;
-            margin-top: 80px;
+            padding: clamp(60px, 10vw, 100px) clamp(15px, 4vw, 25px);
+            margin-top: 60px;
             position: relative;
             overflow: hidden;
         }
 
-        .diocletian-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent);
-            border-radius: 50%;
-            pointer-events: none;
-        }
+            .diocletian-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: clamp(300px, 50vw, 600px);
+                height: clamp(300px, 50vw, 600px);
+                background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent);
+                border-radius: 50%;
+                pointer-events: none;
+            }
 
         .diocletian-content {
             max-width: 1200px;
@@ -514,114 +523,217 @@
 
         .diocletian-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2rem, 5vw, 4.5rem);
             color: var(--gold);
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             text-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
         }
 
         .diocletian-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+            gap: clamp(20px, 3vw, 35px);
         }
 
         .diocletian-card {
             background: rgba(26, 26, 26, 0.8);
-            padding: 35px;
+            padding: clamp(25px, 4vw, 35px);
             border-radius: 15px;
             border: 1px solid rgba(212, 175, 55, 0.3);
             backdrop-filter: blur(10px);
         }
 
-        .diocletian-card h4 {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 1.6rem;
-            color: var(--gold-light);
-            margin-bottom: 20px;
-        }
+            .diocletian-card h4 {
+                font-family: 'El Messiri', sans-serif;
+                font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+                color: var(--gold-light);
+                margin-bottom: 15px;
+            }
 
-        .diocletian-card p, .diocletian-card ul {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            line-height: 2;
-        }
+            .diocletian-card p, .diocletian-card ul {
+                color: var(--text-dim);
+                font-size: clamp(0.95rem, 2vw, 1.1rem);
+                line-height: 1.9;
+            }
 
-        .diocletian-card ul {
-            list-style: none;
-            padding-right: 20px;
-        }
+            .diocletian-card ul {
+                list-style: none;
+                padding-right: 20px;
+            }
 
-        .diocletian-card li {
-            padding: 8px 0;
-            position: relative;
-        }
+            .diocletian-card li {
+                padding: 6px 0;
+                position: relative;
+            }
 
-        .diocletian-card li::before {
-            content: '◆';
-            position: absolute;
-            right: -20px;
-            color: var(--gold);
-        }
+                .diocletian-card li::before {
+                    content: '◆';
+                    position: absolute;
+                    right: -20px;
+                    color: var(--gold);
+                }
 
+        /* ========== CINEMATIC TORTURES SECTION - MOBILE OPTIMIZED ========== */
         .tortures-section {
-            background: linear-gradient(180deg, #000, var(--bg-darker));
-            padding: 120px 25px;
+            background: #000;
+            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
+            position: relative;
+            overflow: hidden;
         }
+
+            .tortures-section::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: clamp(400px, 70vw, 800px);
+                height: clamp(400px, 70vw, 800px);
+                background: radial-gradient(circle, rgba(139, 0, 0, 0.12), transparent 70%);
+                pointer-events: none;
+            }
+
+            .tortures-section .section-title {
+                color: var(--gold);
+                text-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
+            }
 
         .torture-category {
-            margin-bottom: 70px;
+            margin-bottom: clamp(50px, 10vw, 100px);
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s ease;
+            transition: all 1s ease;
         }
 
-        .torture-category.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .torture-category.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-        .torture-category h3 {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 2.2rem;
-            color: var(--gold);
-            margin-bottom: 35px;
-            text-align: center;
-        }
+            .torture-category h3 {
+                font-family: 'El Messiri', sans-serif;
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                color: var(--gold);
+                margin-bottom: clamp(30px, 5vw, 50px);
+                text-align: center;
+                text-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+                letter-spacing: 1px;
+            }
 
         .torture-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(15px, 3vw, 30px);
         }
 
         .torture-item {
-            background: rgba(26, 26, 26, 0.6);
-            padding: 28px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.7));
+            padding: clamp(20px, 4vw, 35px) clamp(15px, 3vw, 25px);
+            border-radius: 15px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.5s ease;
+            border: 2px solid rgba(139, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .torture-item:hover {
-            border-color: rgba(212, 175, 55, 0.6);
-            background: rgba(26, 26, 26, 0.9);
-            transform: scale(1.05);
-        }
+            .torture-item.stagger-visible {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            .torture-item::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: radial-gradient(circle at center, rgba(139, 0, 0, 0.08), transparent);
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            .torture-item:hover::before {
+                opacity: 1;
+            }
+
+            .torture-item:hover {
+                border-color: var(--gold);
+                background: linear-gradient(135deg, rgba(20, 20, 20, 1), rgba(30, 30, 30, 0.9));
+                transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 10px 35px rgba(212, 175, 55, 0.4), 0 0 25px rgba(139, 0, 0, 0.3);
+            }
 
         .torture-icon {
-            font-size: 3.5rem;
-            margin-bottom: 18px;
-            color: var(--gold);
-            opacity: 0.8;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: clamp(12px, 3vw, 20px);
+            filter: grayscale(1) brightness(0.5);
+            transition: all 0.5s ease;
+            display: inline-block;
+        }
+
+        .torture-item:hover .torture-icon {
+            filter: grayscale(0) brightness(1.2);
+            transform: scale(1.1) rotate(3deg);
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
         }
 
         .torture-name {
-            font-size: 1.25rem;
-            font-weight: 600;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: 700;
             color: var(--text-light);
+            margin-bottom: clamp(10px, 2vw, 15px);
+            font-family: 'El Messiri', sans-serif;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+        }
+
+        .saint-reveal {
+            display: block;
+            margin-top: clamp(10px, 2vw, 15px);
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 400;
+            color: var(--gold-light);
+            opacity: 0;
+            transform: translateY(15px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            text-shadow: 0 0 0px transparent;
+        }
+
+        .torture-item:hover .saint-reveal {
+            opacity: 1;
+            transform: translateY(0);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 35px rgba(212, 175, 55, 0.5);
+        }
+
+        /* Mobile: تفعيل الكشف بالتاتش بدلاً من الهوفر */
+        @media (hover: none) and (pointer: coarse) {
+            .torture-item {
+                padding: clamp(18px, 4vw, 25px) clamp(12px, 3vw, 20px);
+            }
+
+            .saint-reveal {
+                opacity: 0.7;
+                transform: translateY(0);
+                font-size: clamp(0.85rem, 1.8vw, 1rem);
+                margin-top: 8px;
+            }
+
+            .torture-item:active .saint-reveal {
+                opacity: 1;
+                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            }
+
+            .torture-icon {
+                filter: grayscale(0.5) brightness(0.7);
+            }
         }
 
         .evaluation-section {
@@ -646,16 +758,16 @@
             transition: all 0.8s ease;
         }
 
-        .preaching-image-container.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
+            .preaching-image-container.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
 
-        .preaching-image-container img {
-            width: 300px;
-            height: 300px;
-            display: block;
-        }
+            .preaching-image-container img {
+                width: 300px;
+                height: 300px;
+                display: block;
+            }
 
         .preaching-caption {
             font-family: 'El Messiri', sans-serif;
@@ -664,16 +776,17 @@
             margin-top: 20px;
         }
 
+
         .evaluation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(25px, 4vw, 40px);
+            margin-bottom: 50px;
         }
 
         .evaluation-card {
             background: linear-gradient(135deg, var(--bg-dark), var(--bg-secondary));
-            padding: 40px;
+            padding: clamp(25px, 5vw, 40px);
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.3);
             text-align: center;
@@ -682,33 +795,33 @@
             transform: scale(0.95);
         }
 
-        .evaluation-card.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
+            .evaluation-card.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
 
-        .evaluation-card:hover {
-            border-color: var(--gold);
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
-            transform: scale(1.05);
-        }
+            .evaluation-card:hover {
+                border-color: var(--gold);
+                box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+                transform: scale(1.03);
+            }
 
-        .evaluation-card h3 {
-            font-family: 'El Messiri', sans-serif;
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
+            .evaluation-card h3 {
+                font-family: 'El Messiri', sans-serif;
+                font-size: clamp(1.4rem, 3vw, 2rem);
+                color: var(--gold);
+                margin-bottom: 15px;
+            }
 
-        .evaluation-card p {
-            color: var(--text-dim);
-            font-size: 1.15rem;
-            line-height: 2;
-        }
+            .evaluation-card p {
+                color: var(--text-dim);
+                font-size: clamp(0.95rem, 2vw, 1.15rem);
+                line-height: 1.9;
+            }
 
         .quotes-highlight {
             background: var(--bg-dark);
-            padding: 50px;
+            padding: clamp(30px, 5vw, 50px);
             border-radius: 20px;
             border-right: 5px solid var(--gold);
             border-left: 5px solid var(--gold);
@@ -716,12 +829,13 @@
 
         .quote-item {
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 2.8vw, 1.6rem);
             color: var(--gold-light);
             text-align: center;
             font-style: italic;
-            margin: 25px 0;
-            line-height: 2.2;
+            margin: clamp(15px, 3vw, 25px) 0;
+            line-height: 2;
+            padding: 0 10px;
         }
 
         .motives-section {
@@ -730,13 +844,13 @@
 
         .motives-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(25px, 4vw, 40px);
         }
 
         .motive-card {
             background: var(--bg-secondary);
-            padding: 45px;
+            padding: clamp(30px, 5vw, 45px);
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.25);
             text-align: center;
@@ -745,52 +859,52 @@
             transform: translateY(30px);
         }
 
-        .motive-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .motive-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-        .motive-card:hover {
-            transform: translateY(-15px);
-            border-color: var(--gold);
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
-        }
+            .motive-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--gold);
+                box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+            }
 
         .motive-number {
             font-family: 'El Messiri', sans-serif;
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--gold);
             opacity: 0.4;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .motive-card h3 {
             font-family: 'El Messiri', sans-serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
             color: var(--gold-light);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .conclusion-section {
             background: linear-gradient(180deg, var(--bg-secondary), var(--bg-darker));
-            padding: 120px 25px;
+            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
             text-align: center;
         }
 
         .glory-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: clamp(15px, 3vw, 30px);
+            margin-bottom: 50px;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
         }
 
-        .glory-images.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .glory-images.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
         .glory-image-card {
             position: relative;
@@ -801,17 +915,17 @@
             transition: all 0.4s ease;
         }
 
-        .glory-image-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 60px rgba(212, 175, 55, 0.7);
-        }
+            .glory-image-card:hover {
+                transform: scale(1.03);
+                box-shadow: 0 0 60px rgba(212, 175, 55, 0.7);
+            }
 
-        .glory-image-card img {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            display: block;
-        }
+            .glory-image-card img {
+                width: 100%;
+                height: clamp(250px, 35vw, 320px);
+                object-fit: cover;
+                display: block;
+            }
 
         .conclusion-content {
             max-width: 900px;
@@ -819,23 +933,24 @@
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
+            padding: 0 15px;
         }
 
-        .conclusion-content.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+            .conclusion-content.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
         .conclusion-text {
-            font-size: 1.3rem;
-            line-height: 2.3;
+            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
+            line-height: 2.2;
             color: var(--text-dim);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .final-button {
-            padding: 20px 60px;
-            font-size: 1.3rem;
+            padding: clamp(16px, 3vw, 20px) clamp(40px, 8vw, 60px);
+            font-size: clamp(1.1rem, 2.3vw, 1.3rem);
             font-weight: 700;
             background: linear-gradient(135deg, var(--gold-dark), var(--gold));
             color: #fff;
@@ -848,52 +963,95 @@
             letter-spacing: 2px;
         }
 
-        .final-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 70px rgba(212, 175, 55, 1);
-        }
+            .final-button:hover {
+                transform: scale(1.08);
+                box-shadow: 0 0 70px rgba(212, 175, 55, 1);
+            }
 
         footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: clamp(30px, 5vw, 50px) 20px;
             background: #000;
             color: var(--text-dim);
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 1.8vw, 1rem);
             border-top: 1px solid rgba(212, 175, 55, 0.2);
+            line-height: 1.6;
         }
 
+            footer p {
+                margin: 8px 0;
+            }
+
+        /* تحسينات الموبايل المتقدمة */
         @media (max-width: 768px) {
             .timeline::before {
-                right: 20px;
+                right: 15px;
             }
 
             .timeline-content {
-                margin-left: 50px;
+                margin-left: 40px;
             }
 
-            .timeline-content::before {
-                right: -37px;
+                .timeline-content::before {
+                    right: -28px;
+                    width: 18px;
+                    height: 18px;
+                }
+
+            .hero {
+                padding: 30px 15px;
             }
 
-            section {
-                padding: 80px 15px;
+            /* تقليل الظلال والتأثيرات على الموبايل لتحسين الأداء */
+            .torture-item {
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
             }
 
-            .love-pain-grid,
-            .reasons-grid,
-            .evaluation-grid,
-            .motives-grid {
-                grid-template-columns: 1fr;
+                .torture-item:hover {
+                    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
+                }
+
+            /* تحسين المسافات */
+            .torture-list {
+                gap: 12px;
             }
 
-            .saints-gallery,
-            .glory-images {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            .torture-category {
+                margin-bottom: 40px;
+            }
+        }
+
+        /* تحسينات للشاشات الصغيرة جداً */
+        @media (max-width: 480px) {
+            .hero h1 {
+                letter-spacing: 1px;
             }
 
-            .saint-image-card img,
-            .glory-image-card img {
-                height: 200px;
+            .cta-button {
+                padding: 14px 35px;
+                letter-spacing: 1px;
+            }
+
+            .saint-reveal {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .torture-name {
+                font-size: 1.05rem;
+            }
+
+            .torture-icon {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* تحسين الأداء: إيقاف الأنيميشنات المعقدة على الأجهزة الضعيفة */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
@@ -1146,18 +1304,22 @@
                 <div class="torture-item">
                     <div class="torture-icon">💔</div>
                     <p class="torture-name">الإهانات العلنية</p>
+                    <span class="saint-reveal">القديسة دميانة والأربعين عذراء</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🏛️</div>
                     <p class="torture-name">مصادرة الأموال</p>
+                    <span class="saint-reveal">القديس أبي سيفين</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">⚖️</div>
                     <p class="torture-name">فقد الحقوق المدنية</p>
+                    <span class="saint-reveal">الشهيد مارجرجس (أمير الشهداء)</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🚫</div>
                     <p class="torture-name">المنع من العمل</p>
+                    <span class="saint-reveal">شهداء الإيمان الأوائل</span>
                 </div>
             </div>
         </div>
@@ -1168,18 +1330,22 @@
                 <div class="torture-item">
                     <div class="torture-icon">🔨</div>
                     <p class="torture-name">نزع الأظافر</p>
+                    <span class="saint-reveal">الشهيد أبانوب النهيسي</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">⚔️</div>
                     <p class="torture-name">السحل</p>
+                    <span class="saint-reveal">مارمرقس الرسول</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🩸</div>
                     <p class="torture-name">السلخ</p>
+                    <span class="saint-reveal">القديس برثولماوس الرسول</span>
                 </div>
                 <div class="torture-item">
-                    <div class="torture-icon">🪢</div>
+                    <div class="torture-icon">🔗</div>
                     <p class="torture-name">الجلد بالسياط</p>
+                    <span class="saint-reveal">القديس بقطر بن رومانوس</span>
                 </div>
             </div>
         </div>
@@ -1190,26 +1356,32 @@
                 <div class="torture-item">
                     <div class="torture-icon">🔥</div>
                     <p class="torture-name">الحرق</p>
+                    <span class="saint-reveal">القديس بوليكاربوس</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">✝️</div>
                     <p class="torture-name">الصلب</p>
+                    <span class="saint-reveal">القديس بطرس الرسول</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🦁</div>
                     <p class="torture-name">الإلقاء للوحوش</p>
+                    <span class="saint-reveal">القديس إغناطيوس الأنطاكي</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">⚰️</div>
                     <p class="torture-name">الدفن حيًا</p>
+                    <span class="saint-reveal">القديسان فيكتور وماكسيموس</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🗡️</div>
                     <p class="torture-name">قطع الرأس</p>
+                    <span class="saint-reveal">القديس يوحنا المعمدان ومارجرجس</span>
                 </div>
                 <div class="torture-item">
                     <div class="torture-icon">🌊</div>
                     <p class="torture-name">الإغراق</p>
+                    <span class="saint-reveal">القديسان قزمان ودميان وإخوتهم</span>
                 </div>
             </div>
         </div>
@@ -1272,30 +1444,26 @@
     </section>
 
     <section class="conclusion-section">
-        <h2 class="section-title">جزاء الشهداء في ملكوت السماوات</h2>
+        <h2 class="section-title">الاستشهاد: شهادة الإيمان الحي</h2>
 
         <div class="glory-images">
             <div class="glory-image-card">
                 <img src="https://raw.githubusercontent.com/Abanoub756/Martyrs/refs/heads/main/images/Heaven-Glory.jpg" alt="المجد السماوي">
-                <div class="saint-caption">المجد السماوي</div>
             </div>
             <div class="glory-image-card">
                 <img src="https://raw.githubusercontent.com/Abanoub756/Martyrs/refs/heads/main/images/Crowns.jpg" alt="الأكاليل">
-                <div class="saint-caption">الأكاليل</div>
             </div>
             <div class="glory-image-card">
                 <img src="https://raw.githubusercontent.com/Abanoub756/Martyrs/refs/heads/main/images/Jesus-Glory.jpeg" alt="النور الإلهي">
-                <div class="saint-caption">النور الإلهي</div>
             </div>
             <div class="glory-image-card">
                 <img src="https://raw.githubusercontent.com/Abanoub756/Martyrs/refs/heads/main/images/Happiness.jpg" alt="الفرح الأبدي">
-                <div class="saint-caption">الفرح الأبدي</div>
             </div>
         </div>
 
         <div class="conclusion-content">
             <p class="conclusion-text">
-                لقد تعلمنا من رحلة الشهداء أن الإيمان الحقيقي لا يهاب الموت، وأن المحبة الحقيقية تبذل الذات بلا حدود. 
+                لقد تعلمنا من رحلة الشهداء أن الإيمان الحقيقي لا يهاب الموت، وأن المحبة الحقيقية تبذل الذات بلا حدود.
                 الاستشهاد ليس نهاية، بل هو ذروة العطاء وقمة الشهادة على صدق العلاقة مع الله، ونور يضيء دروب الأجيال القادمة نحو الثبات والتضحية والفداء.
             </p>
             <button class="final-button" onclick="scrollToSection('hero')">عودة إلى البداية</button>
@@ -1304,10 +1472,10 @@
 
     <footer>
         <p>© 2026 عصر الاستشهاد - رحلة في التاريخ المسيحي المقدس</p>
-        <p style="margin-top: 10px; font-size: 0.9rem;">تصميم تفاعلي يحكي قصة الإيمان والتضحية</p>
     </footer>
 
     <script>
+        // شريط التقدم
         window.addEventListener('scroll', () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1315,13 +1483,15 @@
             document.getElementById('progress-bar').style.width = progress + '%';
         });
 
+        // التمرير السلس
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
 
+        // Observer للعناصر العادية
         const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -80px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1332,9 +1502,45 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.love-pain-card, .martyr-definition, .reason-card, .timeline-item, .torture-category, .evaluation-card, .motive-card, .conclusion-content, .saints-gallery, .preaching-image-container, .glory-images').forEach(el => {
+        // Observer خاص بقسم العذابات مع Staggered Animation
+        const tortureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+
+                    const items = entry.target.querySelectorAll('.torture-item');
+
+                    items.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('stagger-visible');
+                        }, index * 150); // تقليل الوقت من 200ms إلى 150ms للأداء الأفضل
+                    });
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        // تطبيق Observer على العناصر العادية
+        document.querySelectorAll('.love-pain-card, .martyr-definition, .reason-card, .timeline-item, .evaluation-card, .motive-card, .conclusion-content, .saints-gallery, .preaching-image-container, .glory-images').forEach(el => {
             observer.observe(el);
         });
+
+        // تطبيق Observer الخاص على أقسام العذابات
+        document.querySelectorAll('.torture-category').forEach(category => {
+            tortureObserver.observe(category);
+        });
+
+        // تحسين الأداء: إيقاف المراقبة بعد ظهور العنصر
+        const optimizedObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    optimizedObserver.unobserve(entry.target); // إيقاف المراقبة
+                }
+            });
+        }, observerOptions);
     </script>
 </body>
 </html>
