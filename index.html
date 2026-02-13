@@ -47,7 +47,7 @@
         }
 
         .hero {
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,7 +55,7 @@
             text-align: center;
             background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://via.placeholder.com/1920x1080/0a0a0a/d4af37?text=عصر+الاستشهاد') center/cover;
             position: relative;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
             .hero::before {
@@ -89,34 +89,33 @@
 
         .hero h1 {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(2.2rem, 8vw, 6rem);
+            font-size: clamp(3rem, 10vw, 6rem);
             font-weight: 900;
             color: var(--gold);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .hero h2 {
-            font-size: clamp(1.1rem, 3vw, 2.2rem);
+            font-size: clamp(1.3rem, 3.5vw, 2.2rem);
             font-weight: 300;
-            margin-bottom: 25px;
+            margin-bottom: 35px;
             color: var(--gold-light);
             letter-spacing: 1px;
         }
 
         .hero p {
             max-width: 800px;
-            font-size: clamp(0.95rem, 2vw, 1.3rem);
-            margin-bottom: 35px;
+            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+            margin-bottom: 45px;
             color: var(--text-dim);
-            line-height: 2;
-            padding: 0 10px;
+            line-height: 2.2;
         }
 
         .cta-button {
-            padding: 16px 45px;
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            padding: 20px 55px;
+            font-size: 1.25rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--bg-dark);
@@ -131,24 +130,24 @@
         }
 
             .cta-button:hover {
-                transform: scale(1.05);
+                transform: scale(1.08);
                 box-shadow: 0 0 60px rgba(212, 175, 55, 0.9);
             }
 
         section {
-            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
+            padding: 120px 25px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.8rem, 5vw, 4rem);
+            font-size: clamp(2.2rem, 5.5vw, 4rem);
             text-align: center;
-            margin-bottom: clamp(40px, 7vw, 70px);
+            margin-bottom: 70px;
             color: var(--gold);
             position: relative;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
         }
 
             .section-title::after {
@@ -157,7 +156,7 @@
                 bottom: 0;
                 left: 50%;
                 transform: translateX(-50%);
-                width: clamp(80px, 15vw, 120px);
+                width: 120px;
                 height: 3px;
                 background: linear-gradient(90deg, transparent, var(--gold), transparent);
                 box-shadow: 0 0 10px var(--gold);
@@ -170,32 +169,31 @@
         .intro-text {
             text-align: center;
             max-width: 900px;
-            margin: 0 auto 50px;
-            font-size: clamp(1rem, 2.2vw, 1.2rem);
-            line-height: 2;
+            margin: 0 auto 60px;
+            font-size: 1.2rem;
+            line-height: 2.2;
             color: var(--text-dim);
-            padding: 0 15px;
         }
 
         .quote-highlight {
             display: block;
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-size: 1.4rem;
             color: var(--gold-light);
-            margin: 25px 0;
+            margin: 30px 0;
             font-style: italic;
         }
 
         .love-pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: clamp(25px, 4vw, 40px);
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
         }
 
         .love-pain-card {
             background: var(--bg-dark);
-            padding: clamp(25px, 5vw, 40px);
+            padding: 40px;
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.2);
             text-align: center;
@@ -210,35 +208,35 @@
             }
 
             .love-pain-card:hover {
-                transform: translateY(-10px);
+                transform: translateY(-15px);
                 border-color: var(--gold);
-                box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
             }
 
         .love-pain-icon {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: 15px;
+            font-size: 4rem;
+            margin-bottom: 20px;
         }
 
         .love-pain-card h3 {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-size: 1.8rem;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .love-pain-card p {
             color: var(--text-dim);
-            font-size: clamp(0.95rem, 2vw, 1.1rem);
-            line-height: 1.8;
+            font-size: 1.1rem;
+            line-height: 1.9;
         }
 
         .martyr-definition {
             background: var(--bg-dark);
-            padding: clamp(30px, 5vw, 50px);
+            padding: 50px;
             border-radius: 20px;
             border-right: 5px solid var(--gold);
-            margin-top: 50px;
+            margin-top: 60px;
             opacity: 0;
             transform: translateX(-30px);
             transition: all 0.6s ease;
@@ -251,9 +249,9 @@
 
             .martyr-definition h3 {
                 font-family: 'El Messiri', sans-serif;
-                font-size: clamp(1.5rem, 3.5vw, 2rem);
+                font-size: 2rem;
                 color: var(--gold);
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
 
             .martyr-definition ul {
@@ -262,11 +260,10 @@
             }
 
             .martyr-definition li {
-                padding: 12px 0;
-                font-size: clamp(0.95rem, 2vw, 1.15rem);
+                padding: 15px 0;
+                font-size: 1.15rem;
                 color: var(--text-dim);
                 border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-                line-height: 1.7;
             }
 
                 .martyr-definition li:last-child {
@@ -275,14 +272,14 @@
 
         .reasons-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-            gap: clamp(20px, 3vw, 35px);
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 50px;
         }
 
         .reason-card {
             background: var(--bg-secondary);
-            padding: clamp(25px, 4vw, 35px);
+            padding: 35px;
             border-radius: 18px;
             border: 1px solid rgba(212, 175, 55, 0.25);
             transition: all 0.5s ease;
@@ -296,63 +293,62 @@
             }
 
             .reason-card:hover {
-                transform: translateY(-8px);
+                transform: translateY(-12px);
                 border-color: var(--gold);
-                box-shadow: 0 10px 35px rgba(212, 175, 55, 0.35);
+                box-shadow: 0 12px 45px rgba(212, 175, 55, 0.35);
             }
 
         .reason-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+            font-size: 1.5rem;
             color: var(--gold);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .reason-text {
-            font-size: clamp(0.95rem, 2vw, 1.1rem);
-            line-height: 1.8;
+            font-size: 1.1rem;
+            line-height: 1.9;
             color: var(--text-light);
         }
 
         .christian-life {
             background: var(--bg-dark);
-            padding: clamp(30px, 5vw, 50px);
+            padding: 50px;
             border-radius: 20px;
-            margin-top: 60px;
+            margin-top: 70px;
             border: 2px solid rgba(212, 175, 55, 0.3);
         }
 
             .christian-life h3 {
                 font-family: 'El Messiri', sans-serif;
-                font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+                font-size: 2.2rem;
                 color: var(--gold);
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
 
         .life-points {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-            gap: clamp(15px, 3vw, 25px);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
         .life-point {
             background: var(--bg-secondary);
-            padding: clamp(18px, 3vw, 25px);
+            padding: 25px;
             border-radius: 12px;
             border-right: 3px solid var(--gold);
         }
 
             .life-point h4 {
                 color: var(--gold-light);
-                font-size: clamp(1rem, 2.2vw, 1.2rem);
-                margin-bottom: 8px;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
             }
 
             .life-point p {
                 color: var(--text-dim);
-                font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-                line-height: 1.6;
+                font-size: 1.05rem;
             }
 
         .timeline-section {
@@ -362,9 +358,9 @@
 
         .saints-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr));
-            gap: clamp(15px, 3vw, 30px);
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
@@ -382,18 +378,16 @@
             border: 3px solid var(--gold);
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
             transition: all 0.4s ease;
-            height: fit-content;
-            display: flex;
         }
 
             .saint-image-card:hover {
-                transform: scale(1.03);
+                transform: scale(1.05);
                 box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
             }
 
             .saint-image-card img {
                 width: 100%;
-                height: clamp(220px, 30vw, 300px);
+                height: 320px;
                 object-fit: cover;
                 display: block;
             }
@@ -404,10 +398,10 @@
             left: 0;
             right: 0;
             background: linear-gradient(transparent, rgba(0,0,0,0.95));
-            padding: 25px 10px 12px;
+            padding: 30px 15px 15px;
             color: var(--gold-light);
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-size: 1.1rem;
             text-align: center;
         }
 
@@ -417,27 +411,27 @@
         }
 
         .timeline-phase {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
 
         .phase-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-size: 1.8rem;
             color: var(--gold-light);
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .timeline {
             position: relative;
-            padding: 20px 0;
+            padding: 30px 0;
         }
 
             .timeline::before {
                 content: '';
                 position: absolute;
                 top: 0;
-                right: clamp(15px, 5vw, 50%);
+                right: 50%;
                 width: 3px;
                 height: 100%;
                 background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, 0.2));
@@ -445,7 +439,7 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             opacity: 0;
             transform: translateX(-40px);
             transition: all 0.7s ease;
@@ -458,10 +452,10 @@
 
         .timeline-content {
             background: var(--bg-dark);
-            padding: clamp(20px, 4vw, 35px);
+            padding: 35px;
             border-radius: 18px;
             border-right: 4px solid var(--gold);
-            margin-left: clamp(40px, 8vw, 70px);
+            margin-left: 70px;
             position: relative;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
         }
@@ -469,34 +463,33 @@
             .timeline-content::before {
                 content: '';
                 position: absolute;
-                top: 20px;
-                right: clamp(-28px, -5vw, -38px);
-                width: clamp(18px, 4vw, 24px);
-                height: clamp(18px, 4vw, 24px);
+                top: 25px;
+                right: -38px;
+                width: 24px;
+                height: 24px;
                 background: var(--gold);
                 border-radius: 50%;
                 box-shadow: 0 0 25px var(--gold);
-                border: 3px solid var(--bg-dark);
+                border: 4px solid var(--bg-dark);
             }
 
         .timeline-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-size: 2rem;
             color: var(--gold);
-            margin-bottom: 15px;
-            line-height: 1.4;
+            margin-bottom: 18px;
         }
 
         .timeline-text {
             color: var(--text-dim);
-            font-size: clamp(0.95rem, 2vw, 1.15rem);
-            line-height: 1.9;
+            font-size: 1.15rem;
+            line-height: 2;
         }
 
         .diocletian-section {
             background: linear-gradient(180deg, var(--bg-darker), #000);
-            padding: clamp(60px, 10vw, 100px) clamp(15px, 4vw, 25px);
-            margin-top: 60px;
+            padding: 100px 25px;
+            margin-top: 80px;
             position: relative;
             overflow: hidden;
         }
@@ -507,8 +500,8 @@
                 top: 0;
                 left: 50%;
                 transform: translateX(-50%);
-                width: clamp(300px, 50vw, 600px);
-                height: clamp(300px, 50vw, 600px);
+                width: 600px;
+                height: 600px;
                 background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent);
                 border-radius: 50%;
                 pointer-events: none;
@@ -523,22 +516,22 @@
 
         .diocletian-title {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(2rem, 5vw, 4.5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             color: var(--gold);
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             text-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
         }
 
         .diocletian-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-            gap: clamp(20px, 3vw, 35px);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
         }
 
         .diocletian-card {
             background: rgba(26, 26, 26, 0.8);
-            padding: clamp(25px, 4vw, 35px);
+            padding: 35px;
             border-radius: 15px;
             border: 1px solid rgba(212, 175, 55, 0.3);
             backdrop-filter: blur(10px);
@@ -546,15 +539,15 @@
 
             .diocletian-card h4 {
                 font-family: 'El Messiri', sans-serif;
-                font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+                font-size: 1.6rem;
                 color: var(--gold-light);
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
 
             .diocletian-card p, .diocletian-card ul {
                 color: var(--text-dim);
-                font-size: clamp(0.95rem, 2vw, 1.1rem);
-                line-height: 1.9;
+                font-size: 1.1rem;
+                line-height: 2;
             }
 
             .diocletian-card ul {
@@ -563,7 +556,7 @@
             }
 
             .diocletian-card li {
-                padding: 6px 0;
+                padding: 8px 0;
                 position: relative;
             }
 
@@ -574,10 +567,10 @@
                     color: var(--gold);
                 }
 
-        /* ========== CINEMATIC TORTURES SECTION - MOBILE OPTIMIZED ========== */
+        /* ========== CINEMATIC TORTURES SECTION ========== */
         .tortures-section {
             background: #000;
-            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
+            padding: 120px 25px;
             position: relative;
             overflow: hidden;
         }
@@ -588,21 +581,21 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: clamp(400px, 70vw, 800px);
-                height: clamp(400px, 70vw, 800px);
-                background: radial-gradient(circle, rgba(139, 0, 0, 0.12), transparent 70%);
+                width: 800px;
+                height: 800px;
+                background: radial-gradient(circle, rgba(139, 0, 0, 0.15), transparent 70%);
                 pointer-events: none;
             }
 
             .tortures-section .section-title {
                 color: var(--gold);
-                text-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
+                text-shadow: 0 0 50px rgba(212, 175, 55, 0.7);
             }
 
         .torture-category {
-            margin-bottom: clamp(50px, 10vw, 100px);
+            margin-bottom: 100px;
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(60px);
             transition: all 1s ease;
         }
 
@@ -613,32 +606,32 @@
 
             .torture-category h3 {
                 font-family: 'El Messiri', sans-serif;
-                font-size: clamp(1.5rem, 4vw, 2.5rem);
+                font-size: 2.5rem;
                 color: var(--gold);
-                margin-bottom: clamp(30px, 5vw, 50px);
+                margin-bottom: 50px;
                 text-align: center;
-                text-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
-                letter-spacing: 1px;
+                text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+                letter-spacing: 2px;
             }
 
         .torture-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-            gap: clamp(15px, 3vw, 30px);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
         }
 
         .torture-item {
             background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(26, 26, 26, 0.7));
-            padding: clamp(20px, 4vw, 35px) clamp(15px, 3vw, 25px);
+            padding: 35px 25px;
             border-radius: 15px;
             text-align: center;
             border: 2px solid rgba(139, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
-            transform: translateY(20px) scale(0.98);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transform: translateY(30px) scale(0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
         }
 
             .torture-item.stagger-visible {
@@ -653,9 +646,9 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background: radial-gradient(circle at center, rgba(139, 0, 0, 0.08), transparent);
+                background: radial-gradient(circle at center, rgba(139, 0, 0, 0.1), transparent);
                 opacity: 0;
-                transition: opacity 0.5s ease;
+                transition: opacity 0.6s ease;
             }
 
             .torture-item:hover::before {
@@ -665,75 +658,51 @@
             .torture-item:hover {
                 border-color: var(--gold);
                 background: linear-gradient(135deg, rgba(20, 20, 20, 1), rgba(30, 30, 30, 0.9));
-                transform: translateY(-5px) scale(1.02);
-                box-shadow: 0 10px 35px rgba(212, 175, 55, 0.4), 0 0 25px rgba(139, 0, 0, 0.3);
+                transform: translateY(-10px) scale(1.03);
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4), 0 0 30px rgba(139, 0, 0, 0.3);
             }
 
         .torture-icon {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: clamp(12px, 3vw, 20px);
+            font-size: 4rem;
+            margin-bottom: 20px;
             filter: grayscale(1) brightness(0.5);
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
             display: inline-block;
         }
 
         .torture-item:hover .torture-icon {
             filter: grayscale(0) brightness(1.2);
-            transform: scale(1.1) rotate(3deg);
-            text-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+            transform: scale(1.15) rotate(5deg);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
         }
 
         .torture-name {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-size: 1.4rem;
             font-weight: 700;
             color: var(--text-light);
-            margin-bottom: clamp(10px, 2vw, 15px);
+            margin-bottom: 15px;
             font-family: 'El Messiri', sans-serif;
-            letter-spacing: 0.5px;
-            line-height: 1.4;
+            letter-spacing: 1px;
         }
 
         .saint-reveal {
             display: block;
-            margin-top: clamp(10px, 2vw, 15px);
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-top: 15px;
+            font-size: 1.1rem;
             font-weight: 400;
             color: var(--gold-light);
             opacity: 0;
-            transform: translateY(15px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: 'Cairo', sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             text-shadow: 0 0 0px transparent;
         }
 
         .torture-item:hover .saint-reveal {
             opacity: 1;
             transform: translateY(0);
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 35px rgba(212, 175, 55, 0.5);
-        }
-
-        /* Mobile: تفعيل الكشف بالتاتش بدلاً من الهوفر */
-        @media (hover: none) and (pointer: coarse) {
-            .torture-item {
-                padding: clamp(18px, 4vw, 25px) clamp(12px, 3vw, 20px);
-            }
-
-            .saint-reveal {
-                opacity: 0.7;
-                transform: translateY(0);
-                font-size: clamp(0.85rem, 1.8vw, 1rem);
-                margin-top: 8px;
-            }
-
-            .torture-item:active .saint-reveal {
-                opacity: 1;
-                text-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            }
-
-            .torture-icon {
-                filter: grayscale(0.5) brightness(0.7);
-            }
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.9), 0 0 40px rgba(212, 175, 55, 0.5);
         }
 
         .evaluation-section {
@@ -777,16 +746,17 @@
         }
 
 
+
         .evaluation-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: clamp(25px, 4vw, 40px);
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
         .evaluation-card {
             background: linear-gradient(135deg, var(--bg-dark), var(--bg-secondary));
-            padding: clamp(25px, 5vw, 40px);
+            padding: 40px;
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.3);
             text-align: center;
@@ -802,26 +772,26 @@
 
             .evaluation-card:hover {
                 border-color: var(--gold);
-                box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
-                transform: scale(1.03);
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+                transform: scale(1.05);
             }
 
             .evaluation-card h3 {
                 font-family: 'El Messiri', sans-serif;
-                font-size: clamp(1.4rem, 3vw, 2rem);
+                font-size: 2rem;
                 color: var(--gold);
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
 
             .evaluation-card p {
                 color: var(--text-dim);
-                font-size: clamp(0.95rem, 2vw, 1.15rem);
-                line-height: 1.9;
+                font-size: 1.15rem;
+                line-height: 2;
             }
 
         .quotes-highlight {
             background: var(--bg-dark);
-            padding: clamp(30px, 5vw, 50px);
+            padding: 50px;
             border-radius: 20px;
             border-right: 5px solid var(--gold);
             border-left: 5px solid var(--gold);
@@ -829,13 +799,12 @@
 
         .quote-item {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+            font-size: 1.6rem;
             color: var(--gold-light);
             text-align: center;
             font-style: italic;
-            margin: clamp(15px, 3vw, 25px) 0;
-            line-height: 2;
-            padding: 0 10px;
+            margin: 25px 0;
+            line-height: 2.2;
         }
 
         .motives-section {
@@ -844,13 +813,13 @@
 
         .motives-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: clamp(25px, 4vw, 40px);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
         .motive-card {
             background: var(--bg-secondary);
-            padding: clamp(30px, 5vw, 45px);
+            padding: 45px;
             border-radius: 20px;
             border: 2px solid rgba(212, 175, 55, 0.25);
             text-align: center;
@@ -865,37 +834,37 @@
             }
 
             .motive-card:hover {
-                transform: translateY(-10px);
+                transform: translateY(-15px);
                 border-color: var(--gold);
-                box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
+                box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
             }
 
         .motive-number {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: 4rem;
             color: var(--gold);
             opacity: 0.4;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .motive-card h3 {
             font-family: 'El Messiri', sans-serif;
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-size: 1.8rem;
             color: var(--gold-light);
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .conclusion-section {
             background: linear-gradient(180deg, var(--bg-secondary), var(--bg-darker));
-            padding: clamp(60px, 10vw, 120px) clamp(15px, 4vw, 25px);
+            padding: 120px 25px;
             text-align: center;
         }
 
         .glory-images {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-            gap: clamp(15px, 3vw, 30px);
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
@@ -916,13 +885,13 @@
         }
 
             .glory-image-card:hover {
-                transform: scale(1.03);
+                transform: scale(1.05);
                 box-shadow: 0 0 60px rgba(212, 175, 55, 0.7);
             }
 
             .glory-image-card img {
                 width: 100%;
-                height: clamp(250px, 35vw, 320px);
+                height: 320px;
                 object-fit: cover;
                 display: block;
             }
@@ -933,7 +902,6 @@
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
-            padding: 0 15px;
         }
 
             .conclusion-content.visible {
@@ -942,15 +910,15 @@
             }
 
         .conclusion-text {
-            font-size: clamp(1.05rem, 2.3vw, 1.3rem);
-            line-height: 2.2;
+            font-size: 1.3rem;
+            line-height: 2.3;
             color: var(--text-dim);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .final-button {
-            padding: clamp(16px, 3vw, 20px) clamp(40px, 8vw, 60px);
-            font-size: clamp(1.1rem, 2.3vw, 1.3rem);
+            padding: 20px 60px;
+            font-size: 1.3rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--gold-dark), var(--gold));
             color: #fff;
@@ -964,94 +932,55 @@
         }
 
             .final-button:hover {
-                transform: scale(1.08);
+                transform: scale(1.1);
                 box-shadow: 0 0 70px rgba(212, 175, 55, 1);
             }
 
         footer {
             text-align: center;
-            padding: clamp(30px, 5vw, 50px) 20px;
+            padding: 50px 20px;
             background: #000;
             color: var(--text-dim);
-            font-size: clamp(0.85rem, 1.8vw, 1rem);
+            font-size: 1rem;
             border-top: 1px solid rgba(212, 175, 55, 0.2);
-            line-height: 1.6;
         }
 
-            footer p {
-                margin: 8px 0;
-            }
-
-        /* تحسينات الموبايل المتقدمة */
         @media (max-width: 768px) {
             .timeline::before {
-                right: 15px;
+                right: 20px;
             }
 
             .timeline-content {
-                margin-left: 40px;
+                margin-left: 50px;
             }
 
                 .timeline-content::before {
-                    right: -28px;
-                    width: 18px;
-                    height: 18px;
+                    right: -37px;
                 }
 
-            .hero {
-                padding: 30px 15px;
+            section {
+                padding: 80px 15px;
             }
 
-            /* تقليل الظلال والتأثيرات على الموبايل لتحسين الأداء */
-            .torture-item {
-                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+            .love-pain-grid,
+            .reasons-grid,
+            .evaluation-grid,
+            .motives-grid {
+                grid-template-columns: 1fr;
             }
 
-                .torture-item:hover {
-                    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
-                }
+            .saints-gallery,
+            .glory-images {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
 
-            /* تحسين المسافات */
+            .saint-image-card img,
+            .glory-image-card img {
+                height: 200px;
+            }
+
             .torture-list {
-                gap: 12px;
-            }
-
-            .torture-category {
-                margin-bottom: 40px;
-            }
-        }
-
-        /* تحسينات للشاشات الصغيرة جداً */
-        @media (max-width: 480px) {
-            .hero h1 {
-                letter-spacing: 1px;
-            }
-
-            .cta-button {
-                padding: 14px 35px;
-                letter-spacing: 1px;
-            }
-
-            .saint-reveal {
-                font-size: 0.85rem;
-                line-height: 1.5;
-            }
-
-            .torture-name {
-                font-size: 1.05rem;
-            }
-
-            .torture-icon {
-                font-size: 2.2rem;
-            }
-        }
-
-        /* تحسين الأداء: إيقاف الأنيميشنات المعقدة على الأجهزة الضعيفة */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1490,8 +1419,8 @@
 
         // Observer للعناصر العادية
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
@@ -1506,20 +1435,23 @@
         const tortureObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // إضافة visible للقسم نفسه
                     entry.target.classList.add('visible');
 
+                    // جلب جميع الكروت داخل هذا القسم
                     const items = entry.target.querySelectorAll('.torture-item');
 
+                    // تطبيق التأخير التدريجي
                     items.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('stagger-visible');
-                        }, index * 150); // تقليل الوقت من 200ms إلى 150ms للأداء الأفضل
+                        }, index * 200); // 200ms بين كل كارت
                     });
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -30px 0px'
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
         });
 
         // تطبيق Observer على العناصر العادية
@@ -1531,16 +1463,6 @@
         document.querySelectorAll('.torture-category').forEach(category => {
             tortureObserver.observe(category);
         });
-
-        // تحسين الأداء: إيقاف المراقبة بعد ظهور العنصر
-        const optimizedObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    optimizedObserver.unobserve(entry.target); // إيقاف المراقبة
-                }
-            });
-        }, observerOptions);
     </script>
 </body>
 </html>
